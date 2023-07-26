@@ -260,7 +260,7 @@ h5 {
     background-position: bottom center;
 }
 
-.col-right .hero-img img{
+.col-right .hero-img img {
     display: block;
     max-width: 100%;
     height: auto;
@@ -509,6 +509,7 @@ h5 {
 }
 
 .experience .box {
+    position: relative;
     background-color: var(--color-background);
     padding: 105px 0px 70px 0px;
     border-style: solid;
@@ -664,7 +665,7 @@ h5 {
     width: 75px;
 }
 
-.mobile-slider{
+.mobile-slider {
     display: none;
 }
 
@@ -684,7 +685,7 @@ h5 {
         width: 100%;
     }
 
-    .hero img{
+    .hero img {
         display: block;
         max-width: 100%;
     }
@@ -711,7 +712,7 @@ h5 {
         width: 100%;
     }
 
-    .icon-box-wrapper2 .icon-box{
+    .icon-box-wrapper2 .icon-box {
         margin-right: 0;
         margin-left: 0;
         margin-bottom: 50px;
@@ -734,11 +735,11 @@ h5 {
         width: 100%;
     }
 
-    .img-pos-center{
+    .img-pos-center {
         width: 100%;
     }
 
-    .img-pos-center img{
+    .img-pos-center img {
         width: 90%;
     }
 
@@ -803,42 +804,42 @@ h5 {
         width: 100%;
     }
 
-    .img-pos-center{
+    .img-pos-center {
         width: 100%;
     }
 
-    .img-pos-center img{
+    .img-pos-center img {
         width: 90%;
     }
-    
-    
+
+
     .view-all {
         padding: 0 35px 80px;
     }
 
-    .desktop-slider{
+    .desktop-slider {
         display: none;
     }
 
-    .mobile-slider{
+    .mobile-slider {
         display: block;
     }
 
-    .mobile-slider .col-wrap{
+    .mobile-slider .col-wrap {
         flex-direction: column;
         padding-left: 0px;
     }
 
-    .mobile-slider .col-wrap .col-left{
+    .mobile-slider .col-wrap .col-left {
         width: 100%;
     }
 
-    .mobile-slider .col-wrap .col-left img{
+    .mobile-slider .col-wrap .col-left img {
         width: 100%;
     }
 
 
-    .mobile-slider .col-wrap .col-right{
+    .mobile-slider .col-wrap .col-right {
         width: 100%;
     }
 
@@ -948,18 +949,9 @@ h5 {
 }
 
 
-
-
-
-
-
-
-
-
-
 /* Animations */
 
-.aux-fade-in-right {
+.active.aux-fade-in-right {
     animation-name: AuxFadeInRight;
     animation-duration: 1s;
     /* Set the duration of the animation */
@@ -984,7 +976,7 @@ h5 {
 }
 
 
-.fade-in-left-1 {
+.active.fade-in-left-1 {
     animation-name: AuxFadeInLeft1;
     animation-delay: 1s;
     animation-duration: 1.5s;
@@ -1003,7 +995,7 @@ h5 {
     }
 }
 
-.fade-in-right-1 {
+.active.fade-in-right-1 {
     animation-name: AuxFadeInRight1;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
@@ -1023,7 +1015,7 @@ h5 {
 }
 
 
-.fade-in-down1 {
+.active.fade-in-down1 {
     animation-name: AuxFadeInDown1;
     animation-duration: 1.5s;
     animation-delay: .9s;
@@ -1033,7 +1025,7 @@ h5 {
 @keyframes AuxFadeInDown1 {
     from {
         opacity: 0;
-        transform: translate3d(0, -27px, 0)
+        transform: translate3d(0, 60px, 0)
     }
 
     to {
@@ -1042,7 +1034,7 @@ h5 {
     }
 }
 
-.fade-in-down2 {
+.active.fade-in-down2 {
     animation-name: AuxFadeInDown2;
     animation-duration: 2.5s;
     animation-delay: .6s;
@@ -1061,30 +1053,13 @@ h5 {
     }
 }
 
-.fade-in-up1 {
-    animation-name: AuxFadeInUp1;
-    animation-duration: 2.5s;
-    animation-delay: .6s;
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-}
 
-@keyframes AuxFadeInUp1 {
-    from {
-        opacity: 0;
-        transform: translate3d(0, 50px, 0)
-    }
 
-    to {
-        opacity: 1;
-        transform: none
-    }
-}
-
-/* .slide-from-bot{
+.active.slide-from-bot {
     animation-name: AuxSlideFromBot;
     animation-duration: 2.5s;
     animation-delay: .4s;
-    animation-timing-function: cubic-bezier(.165,.84,.44,1);
+    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
 }
 
 @keyframes AuxSlideFromBot {
@@ -1096,22 +1071,55 @@ h5 {
         opacity: 1;
         transform: none
     }
+}
+
+.active.scaledown1 {
+    animation-name: ScaleDown1;
+    animation-duration: 1.5s;
+    animation-delay: .2s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+}
+
+/* Aux Scale Down 1 */
+@keyframes ScaleDown1 {
+    0% {
+        opacity: 0;
+        transform: scale(1.3, 1.3);
+    }
+
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+
+/* .reveal {
+    position: relative;
+    transform: translateY(300px);
+    opacity: 0;
+    transition: 2s all ease;
+    transition: 2s cubic-bezier(.165, .84, .44, 1);
+    transition-delay: 1s;
+} */
+
+/* .reveal.active {
+    transform: translateY(0);
+    opacity: 1;
 } */
 
 
 .reveal {
     position: relative;
-    transform: translateY(300px);
     opacity: 0;
-    /* transition: 2s all ease; */
-    transition: 2s cubic-bezier(.165, .84, .44, 1);
-    transition-delay: 1s;
 }
 
 .reveal.active {
-    transform: translateY(0);
     opacity: 1;
 }
+
+
 
 
 .scale-up1 {
@@ -1130,6 +1138,177 @@ h5 {
         opacity: 1;
     }
 }
+
+
+
+/* View All Practice Class */
+
+
+.vw-wrapper-body {
+    width: 100%;
+    /* display: flex; */
+    position: relative;
+}
+
+
+.vw-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.bg-svg-body {
+    width: auto;
+    max-width: 100%;
+    z-index: 0;
+    position: absolute;
+    top: 175px;
+    right: -40px;
+}
+
+.bg-svg-body1 {
+    width: auto;
+    max-width: 100%;
+    z-index: 0;
+    position: absolute;
+    top: 530px;
+    left: -41px;
+}
+
+.bg-svg-wrapper {
+    transition: background .3s, border .3s, border-radius .3s, box-shadow .3s, transform var(--e-transform-transition-duration, .4s);
+    transition-timing-function: cubic-bezier(.165, .84, .44, 1);
+    transition-duration: 1s;
+    transition-property: all;
+}
+
+.icons{
+    transition: transform 0.5s ease-out;
+}
+
+.icons1{
+    transition: transform 0.5s ease-out;
+}
+
+.trainMotion .bg-svg {
+    transition: transform 0.5s ease-out;
+}
+
+/* .trainMotion.choochoo .bg-svg {
+    transform: translate(-200%, 0%);
+}
+
+.trainMotion1 .bg-svg2 {
+    transform: translate(20%, 0%);
+    transition: all 2s ease-out;
+    transition-delay: 0s;
+}
+
+.trainMotion1 .choochoo .bg-svg2 {
+    transform: translate(0%, 0%);
+} */
+
+/* View All Practice Class */
+
+.active.scaledwn2 {
+    animation-name: ScaleDown2;
+    animation-duration: 2s;
+    animation-delay: .5s;
+    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+}
+
+@keyframes ScaleDown2 {
+    0% {
+        transform: scale(1.4, 1.4);
+    }
+
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+
+
+.active.fadein {
+    animation-name: FadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(.25, .46, .45, .94);
+}
+
+@keyframes FadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.active.fadeinup1 {
+    animation-name: FadeInUp1;
+    animation-duration: 1.5s;
+    animation-delay: .2s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+}
+
+@keyframes FadeInUp1 {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 50px, 0)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+.active.fadeinup {
+    animation-name: FadeInUp;
+    animation-duration: 2s;
+    animation-delay: .25s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+}
+
+@keyframes FadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 27px, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+.active.scaledown {
+    opacity: 0;
+    animation-name: ScaleDown;
+    animation-fill-mode: both;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+}
+
+
+@keyframes ScaleDown {
+    0% {
+        transform: scale(1.1, 1.1);
+    }
+
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+
+/* Animations End */
 
 .swiper {
     width: 1160px;
@@ -1161,7 +1340,7 @@ h5 {
         display: none;
     }
 
-    
+
 
     .mb-menu {
         background-color: var(--color-primary);
@@ -1194,7 +1373,7 @@ h5 {
         font-size: 16px;
     }
 
-    .mb-menu .active{
+    .mb-menu .active {
         margin-top: 50%;
     }
 
@@ -1244,7 +1423,7 @@ h5 {
         font-size: 16px;
     }
 
-    .mb-menu .active{
+    .mb-menu .active {
         margin-top: 50%;
     }
 
